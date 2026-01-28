@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: #2E4372; /* page background */
+  color: #ffffff;
+}
+
+:root{
+  --auth-bg: #1E1E2F;
+  --auth-card: #F8F8F8;
+  --auth-text: #1C1C1C;
+  --auth-muted: #7A7A7A;
+  --auth-btn-from: #6C63FF;
+  --auth-btn-to: #8E78FF;
+  --auth-btn-from-hover: #5A50FF;
+  --auth-btn-to-hover: #7A60FF;
+}
+
+/* Expose variables used in inline styles of login/signup */
+:root{
+  --bg: var(--auth-bg);
+  --card: var(--auth-card);
+  --text: var(--auth-text);
+  --text-light: var(--auth-muted);
+  --primary: var(--auth-btn-from);
+  --primary-dark: var(var(--auth-btn-from-hover))
+}
+
+/* Page background for auth screens */
+.auth-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--auth-bg);
+  padding: 40px 20px;
+}
+
+.auth-box{
+  background: var(--auth-card);
+  color: var(--auth-text);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+  border: 1.5px solid rgba(0,0,0,0.08);
+}
+
+.auth-box h1{ color: var(--auth-text); }
+.auth-box p{ color: var(--auth-muted); }
+
+.form-group label{ color: var(--auth-text); }
+.form-group input{
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--auth-text);
+}
+.form-group input::placeholder{ color: var(--auth-muted); }
+.form-group input:focus{
+  outline: none;
+  border-color: var(--auth-btn-from);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+/* Buttons */
+.btn{ border: none; height: 48px; border-radius: 8px; font-weight: 600; }
+.btn-primary{
+  background: linear-gradient(180deg, var(--auth-btn-from), var(--auth-btn-to));
+  color: #ffffff;
+  transition: transform .15s ease, box-shadow .25s ease, background .25s ease;
+}
+.btn-primary:hover{
+  background: linear-gradient(180deg, var(--auth-btn-from-hover), var(--auth-btn-to-hover));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(108,99,255,.35);
+}
+.btn-primary:active{ transform: translateY(0); }
+
+.back-link, .auth-footer a{ color: var(--auth-btn-from); }
+.back-link:hover, .auth-footer a:hover{ color: var(--auth-btn-from-hover); }
+
+/* Card Container */
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: #FFFFFF; /* card background */
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+/* Toggle Forms */
+.container .registration{
+  display: none;
+}
+
+#check:checked ~ .registration{
+  display: block;
+}
+
+#check:checked ~ .login{
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+/* Form Styling */
+.container .form{
+  padding: 2rem;
+}
+
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1A1A1A;
+}
+
+.form input{
+  height: 52px;
+  width: 100%;
+  padding: 0 12px;
+  font-size: 15px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(30,40,60,0.08);
+  border-radius: 6px;
+  outline: none;
+  background: #fff;
+  color: #1A1A1A;
+}
+
+.form input:focus{
+  box-shadow: 0 6px 18px rgba(46,67,114,0.12);
+  border-color: #2E4372;
+}
+
+.form a{
+  font-size: 15px;
+  color: #2E4372;
+  text-decoration: none;
+}
+
+.form a:hover{
+  text-decoration: underline;
+}
+
+/* Button Styling */
+.form input.button{
+  color: #ffffff;
+  background: #2E4372;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: none;
+  height: 48px;
+  border-radius: 6px;
+}
+
+.form input.button:hover{
+  background: #253559;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Smaller button variant for verification page (keeps same colors) */
+.verification .form input.button.small{
+  height: 36px;
+  width: 140px;
+  font-size: 0.95rem;
+  margin-top: 0.6rem;
+  border-radius: 6px;
+}
+
+.verification .form input.button.small:hover{
+  background: #253559;
+  transform: translateY(-1px);
+}
+
+/* Signup / Toggle Text */
+.signup{
+  font-size: 15px;
+  text-align: center;
+  color: #1A1A1A;
+}
+
+.signup label{
+  color: #2E4372;
+  cursor: pointer;
+}
+
+.signup label:hover{
+  text-decoration: underline;
+}

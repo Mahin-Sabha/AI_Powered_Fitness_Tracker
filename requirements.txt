@@ -1,0 +1,10 @@
+streamlit
+scikit-learn
+pandas
+numpy
+mediapipe==0.10.9
+flask
+python-dotenv
+plotly
+google-genai
+seaborn

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Form Tracker - Perfect Your Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">💪</span>
+                    <span class="logo-text">Fitness Tracker</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#exercises">Exercises</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="{{ url_for('login') }}" class="btn-secondary">Login</a>
+                    <a href="{{ url_for('signup') }}" class="btn-primary">Signup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Perfect Your Exercise Form</h1>
+                <p class="hero-subtitle">Real-time feedback powered by computer vision. Count reps accurately. Exercise safely. Get stronger.</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('signup') }}" class="btn-large btn-primary">Start Training Now</a>
+                    <a href="#how-it-works" class="btn-large btn-outline">See How It Works</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Exercises</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Real-time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Setup Required</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Fitness Tracker?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Real-Time Form Analysis</h3>
+                    <p>Get instant feedback on your exercise form using advanced MediaPipe and OpenCV technology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Smart Rep Counting</h3>
+                    <p>Counts repetitions only when your form is correct, ensuring quality over quantity</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Feedback</h3>
+                    <p>Visual and audio cues help you correct your form immediately during your workout</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>No Equipment Needed</h3>
+                    <p>Just your camera and determination. No wearables or sensors required</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Learn Proper Technique</h3>
+                    <p>Understand the biomechanics of each exercise and build muscle memory</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All processing happens locally. Your workout data stays on your device</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercises Section -->
+    <section id="exercises" class="exercises">
+        <div class="container">
+            <h2 class="section-title">Supported Exercises</h2>
+            <p class="section-subtitle">Master these fundamental movements with perfect form</p>
+            <div class="exercises-grid">
+                <div class="exercise-card">
+                    <div class="exercise-number">01</div>
+                    <h3>Dumbbell High Curl</h3>
+                    <p>Track elbow position and curl height for each rep</p>
+                </div>
+                <div class="exercise-card">
+                    <div class="exercise-number">02</div>
+                    <h3>Lateral Raise</h3>
+                    <p>Monitor shoulder abduction and control for delt activation</p>
+                </div>
+                <div class="exercise-card">
+                    <div class="exercise-number">03</div>
+                    <h3>Hammer Curl</h3>
+                    <p>Reinforce neutral grip curls with consistent range of motion</p>
+                </div>
+                <div class="exercise-card">
+                    <div class="exercise-number">04</div>
+                    <h3>Front Raise</h3>
+                    <p>Focus on front delt raises while keeping core engaged</p>
+                </div>
+                <div class="exercise-card">
+                    <div class="exercise-number">05</div>
+                    <h3>Standing Side Leg Raise</h3>
+                    <p>Improve hip stability and balance with controlled side leg raises</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Account</h3>
+                        <p>Sign up in seconds and get immediate access to all exercises</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Choose Your Exercise</h3>
+                        <p>Select from our library of supported exercises</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Position Your Camera</h3>
+                        <p>Set up your camera to capture your full body movement</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Training</h3>
+                        <p>Exercise with confidence as AI guides your form in real-time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Transform Your Workouts?</h2>
+            <p class="cta-subtitle">Join thousands improving their fitness with AI-powered form correction</p>
+            <a href="signup.html" class="btn-large btn-primary">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Fitness Tracker</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

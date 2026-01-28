@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Toggle between Login and Signup -->
+    <input type="checkbox" id="check" {% if show_signup %}checked{% endif %}>
+
+    <!-- Login Form -->
+    <div class="login form">
+      <header>Login</header>
+
+      <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        {% if login_error %}
+          <p style="color:red; font-size:14px; margin-top:-10px;">{{ login_error }}</p>
+        {% endif %}
+        <input type="submit" class="button" value="Login">
+      </form>
+
+      <div class="signup">
+        <span>Don't have an account? <label for="check">Signup</label></span>
+      </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="registration form">
+      <header>Signup</header>
+
+      <form action="/signup" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Create a password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm password" required>
+        {% if signup_error %}
+          <p style="color:red; font-size:14px; margin-top:-10px;">{{ signup_error }}</p>
+        {% endif %}
+        <input type="submit" class="button" value="Signup">
+      </form>
+
+      <div class="signup">
+        <span>Already have an account? <label for="check">Login</label></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
