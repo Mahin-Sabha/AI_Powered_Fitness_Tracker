@@ -58,14 +58,23 @@ Exercise Detection:
 🏗️ Project Structure
 AI_Powered_Fitness_Tracker/
 ├── app.py                # Core app logic
+
 ├── streamlit_app.py      # Streamlit interface
+
 ├── chatbot.py            # AI-guided chatbot
+
 ├── dashboard.py          # User progress dashboard
+
 ├── exercises.py          # Exercise detection and angle calculation
+
 ├── static/               # CSS styling
+
 ├── templates/            # HTML templates
+
 ├── users.db              # SQLite database
+
 ├── requirements.txt      # Python dependencies
+
 └── README.md             # Project documentation
 
 📝 Usage Examples
